@@ -11,33 +11,33 @@ FOR Loop, While, Do..While
 
 1)
 for($i = 0; $i -lt 10; $i++){
-   $filename = 'Dhawal'+$i+'.txt'
+   $filename = 'ritik'+$i+'.txt'
    New-Item $filename -ItemType File
 }
 
 
 2)
 for($i = 0; $i -lt 10; $i++){
-   $filename = 'Dhawal'+$i
+   $filename = 'ritik'+$i
    New-Item $filename -ItemType Directory
 }
 
 3)
 for($i=0; $i -lt 10; $i++){
-     $path = 'Dhawal'+$i
+     $path = 'ritik'+$i
      for($j=0; $j -lt 10; $j++){
-        $filename = 'Dhawal'+$j
+        $filename = 'ritik'+$j
         New-Item $path/$filename -ItemType Directory
      }
 }
 
 4)
 for($i=0; $i -lt 10; $i++){
-     $path1 = 'Dhawal'+$i
+     $path1 = 'ritik'+$i
      for($j=0; $j -lt 10; $j++){
-        $path2 = 'Dhawal'+$j
+        $path2 = 'ritik'+$j
         for($k=0; $k -lt 10; $k++){
-           $filename = 'Dhawal'+$k+'.txt'
+           $filename = 'ritik'+$k+'.txt'
            New-Item $path1\$path2\$filename -ItemType File
         }
      }
@@ -45,9 +45,9 @@ for($i=0; $i -lt 10; $i++){
 
 5)
 for($i=0; $i -lt 10; $i++){
-     $path = 'Dhawal'+$i
+     $path = 'ritik'+$i
      for($j=0; $j -lt 10; $j++){
-         $filename = 'Dhawal'+$j+'.txt'
+         $filename = 'ritik'+$j+'.txt'
          Copy-Item -Path $filename -Recurse -Destination $path
      }
 }
@@ -55,9 +55,9 @@ for($i=0; $i -lt 10; $i++){
 
 6)
 for($i=0; $i -lt 10; $i++){
-     $path = 'Dhawal'+$i
+     $path = 'ritik'+$i
      for($j=0; $j -lt 10; $j++){
-         $filename = 'Dhawal'+$j+'.txt'
+         $filename = 'ritik'+$j+'.txt'
          Remove-Item -Path $path\$filename -Recurse
      }
 }
@@ -69,14 +69,14 @@ for($i=0; $i -lt 10; $i++){
 1)
 $i=0
 while($i -lt 10){
-	New-Item C:\temp\dhawal$i -ItemType Directory
+	New-Item C:\temp\ritik$i -ItemType Directory
 	$i++
 }
 
 2)
 $i=0
 while($i -lt 10){
-	New-Item C:\temp\dhawal$i.txt -ItemType File
+	New-Item C:\temp\ritik$i.txt -ItemType File
 	$i++
 }
 
@@ -85,7 +85,7 @@ $i=0
 $j=0
 while($i -lt 10){
 	while($j -lt 10){
-		New-Item C:\temp\dhawalnew$j -ItemType Directory
+		New-Item C:\temp\ritiknew$j -ItemType Directory
 		$j++
 	}
 	$i++
@@ -99,7 +99,7 @@ $k=0
 while($i -lt 10){
 	while($j -lt 10){
 		while($k -lt 10){
-			New-Item C:\temp\dhawal$i\dhawalnew$j\dhawal$k.txt -ItemType File
+			New-Item C:\temp\ritik$i\ritiknew$j\ritik$k.txt -ItemType File
 			$k++
 		}
 		$j++
@@ -114,7 +114,7 @@ $i=0
 $j=0
 while($i -lt 10){
 	while($j -lt 10){
-		copy-item C:\temp\dhawal$j.txt -Recurse -Destination C:\temp\dhawal$i
+		copy-item C:\temp\ritik$j.txt -Recurse -Destination C:\temp\ritik$i
 		$j++
 	}
 	$i++
@@ -127,7 +127,7 @@ $i=0
 $j=0
 while($i -lt 10){
 	while($j -lt 10){
-		remove-item C:\temp\dhawal$i\dhawal$j.txt -Recurse
+		remove-item C:\temp\ritik$i\ritik$j.txt -Recurse
 		$j++
 	}
 	$i++
@@ -142,14 +142,14 @@ while($i -lt 10){
 1)
 $i=0
 do{
-	New-Item C:\temp\dhawal$i -ItemType Directory
+	New-Item C:\temp\ritik$i -ItemType Directory
 	$i++
 }while($i -lt 10)
 
 2)
 $i=0
 do{
-	New-Item C:\temp\dhawal$i.txt -ItemType File
+	New-Item C:\temp\ritik$i.txt -ItemType File
 	$i++
 }while($i -lt 10)
 
@@ -158,7 +158,7 @@ $i=0
 do{
 	$j=0
 	do{
-		New-Item C:\temp\dhawal$i\dhawalnew$j -ItemType Directory
+		New-Item C:\temp\ritik$i\ritiknew$j -ItemType Directory
 		$j++
 	}while($j -lt 10)
 	$i++
@@ -171,7 +171,7 @@ do{
 	do{
 		$k=0
 		do{
-			New-Item C:\temp\dhawal$i\dhawalnew$j\dhawal$k.txt -ItemType File
+			New-Item C:\temp\ritik$i\ritiknew$j\ritik$k.txt -ItemType File
                   $k++
 		}while($k -lt 10)
 		$j++
@@ -184,7 +184,7 @@ $i=0
 do{
 	$j=0
 	do{
-		copy-item C:\temp\dhawal$j.txt -Recurse -Destination C:\temp\dhawal$i
+		copy-item C:\temp\ritik$j.txt -Recurse -Destination C:\temp\ritik$i
 		$j++
 	}while($j -lt 10)
 	$i++
@@ -195,7 +195,7 @@ $i=0
 do{
 	$j=0
 	do{
-		remove-item C:\temp\dhawal$i\dhawal$j.txt
+		remove-item C:\temp\ritik$i\ritik$j.txt
 		$j++
 	}while($j -lt 10)
 	$i++
